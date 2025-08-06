@@ -4,8 +4,6 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
 
-     site: 'https://github.com/giubertphone-bit.github.io/',
+     site: 'https://giubertphone-bit.github.io/natural',
     base: '/natural/',  
-
-
 });
