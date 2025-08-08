@@ -1,5 +1,5 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Nav1 from '../components/nav1.astro';
 import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -7,6 +7,17 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<Welcome />
-	<a href="/test"> test page link</a>
+	  <Nav1 />
+  <img id="testImg" src="sample.jpg" alt="Sample Image" />
 </Layout>
+
+
+<style>
+#testImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+</style>
