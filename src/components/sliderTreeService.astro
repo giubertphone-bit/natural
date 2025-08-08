@@ -4,10 +4,14 @@ import { Swiper, SwiperWrapper, SwiperSlide } from "astro-swiper";
 <Swiper
   options={{    // check options at https://swiperjs.com/swiper-api
     autoplay: {
-      delay: 1700,
+      delay: 6000,
       disableOnInteraction: true,
       waitForTransition: false,
     },
+    effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
     loop: true,
   }}>
   <SwiperWrapper>
@@ -16,10 +20,10 @@ import { Swiper, SwiperWrapper, SwiperSlide } from "astro-swiper";
       <img src="/img/treeServiceMain.jpg" alt="" />
     </SwiperSlide>
     <SwiperSlide>
-      <img src="/img/treeServiceMain.jpg" alt="" />
+      <img src="/img/treeServiceClear.jpg" alt="" />
     </SwiperSlide>
     <SwiperSlide>
-      <img src="/img/treeService2.jpg" alt="" />
+      <img src="/img/treeService.jpg" alt="" />
     </SwiperSlide>
   </SwiperWrapper>
 </Swiper>
