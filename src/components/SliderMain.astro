@@ -1,0 +1,37 @@
+---
+import { Swiper, SwiperWrapper, SwiperSlide } from "astro-swiper";
+---
+<Swiper
+  options={{    // check options at https://swiperjs.com/swiper-api
+    autoplay: {
+      delay: 1700,
+      disableOnInteraction: true,
+      waitForTransition: false,
+    },
+    loop: true,
+  }}>
+  <SwiperWrapper>
+    <!-- Slides -->
+    <SwiperSlide>
+      <img src="https://picsum.photos/455/256?nb=1" alt="" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="https://picsum.photos/455/256?nb=2" alt="" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="https://picsum.photos/455/256?nb=3" alt="" />
+    </SwiperSlide>
+  </SwiperWrapper>
+</Swiper>
+
+<style>
+  .swiper {
+   height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  img {
+    width: 100%;
+  }
+</style>
