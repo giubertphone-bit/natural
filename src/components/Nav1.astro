@@ -11,13 +11,16 @@ const currentPath = Astro.url.pathname;
 <style>
     
   nav {
+    position: sticky;
+    z-index: 9999;
+    top: 0;
     display: flex;
     justify-content:center;
     align-items: center;
     padding: 1rem 2rem;
     background-color: #f8f9fa;
     font-family: sans-serif;
-   
+   min-height: 2rem;
   }
 
   .logo {
