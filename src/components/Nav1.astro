@@ -1,9 +1,14 @@
 ---
 const pages = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
   { name: 'Test', href: '/test' },
+  {name: 'Tree Service', href: '/treeservice'},
+  {name: 'Lawn Maintainance', href: '/lawn'},
+  {name: 'Pest', href: '/pest'},
+  {name: 'Fertilizer', href: '/fertelizer'},
+  {name: 'Sprinkler', href: '/sprinkler'},
+  {name: 'hard surface', href: '/hardsurface'},
+  {name: 'Commercial', href: '/commercial'},
 ];
 
 const currentPath = Astro.url.pathname;
@@ -23,12 +28,24 @@ const currentPath = Astro.url.pathname;
     background-color: #f8f9fa;
     font-family: sans-serif;
    min-height: 2rem;
+   
   }
 
   .logo {
     font-weight: bold;
     font-size: 1.5rem;
     padding-right: 2rem;
+    
+  }
+  .logo a{
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  .logo a:hover {
+    color: #51bd26;
+    background-color: #65e9d70a;
   }
 
   .nav-links {
@@ -95,7 +112,7 @@ const currentPath = Astro.url.pathname;
 </style>
 
 <nav>
-  <div class="logo">MySite</div>
+  <div class="logo"><a href="/">MySite</a> </div>
 
   <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
     <div></div>
