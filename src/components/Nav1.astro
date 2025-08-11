@@ -12,8 +12,6 @@ const pages = [
 ];
 
 const currentPath = Astro.url.pathname;
-console.log(currentPath);
-console.log("server log");
 ---
 <style>
 
@@ -114,7 +112,7 @@ console.log("server log");
 </style>
 
 <nav>
-  <div class="logo"><a href="/">Natural Touch {currentPath}</a> </div>
+  <div class="logo"><a href="/">Natural Touch </a> </div>
 
   <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
     <div></div>
@@ -131,6 +129,6 @@ console.log("server log");
         {page.name}
       </a>
     ))}
-  </div>
-  <script>console.log("inscript log")</script>
+</div>
+  
 </nav>
