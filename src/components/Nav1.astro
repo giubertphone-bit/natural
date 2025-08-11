@@ -126,7 +126,7 @@ console.log("server log");
     {pages.map(page => (
       <a
         href={page.href}
-        class={`nav-link ${currentPath === page.href ? 'active' : ''}`}
+        class={`nav-link ${currentPath === page.href ? 'active' : ''} ${currentPath + "/" === page.href ? 'active' : ''}`}
       >
         {page.name}
       </a>
