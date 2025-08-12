@@ -45,12 +45,17 @@ const currentPath = Astro.url.pathname;
   }
   .logo a:hover {
     color: #51bd26;
-    background-color: #65e9d70a;
+    background-color: #65e96c13;
+;
   }
+  .logo.active {
+    
+    border-bottom: 1px solid  #33333346;
+;  }
 
   .nav-links {
     display: flex;
-    gap: 1.5rem;
+    gap: .5rem;
   }
 
   .nav-link {
@@ -62,7 +67,7 @@ const currentPath = Astro.url.pathname;
 
   .nav-link:hover {
     color: #51bd26;
-    background-color: #65e9d70a;
+    background-color: #65e96c13;
   }
 
   .nav-link.active::after {
@@ -112,7 +117,9 @@ const currentPath = Astro.url.pathname;
 </style>
 
 <nav>
-  <div class="logo"><a href="/">Natural Touch </a> </div>
+  <div class={`logo ${currentPath === "/" ?  "active" : ""}`} >
+    <a href="/">Natural Touch</a> 
+  </div>
 
   <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
     <div></div>

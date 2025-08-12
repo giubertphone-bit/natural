@@ -1,24 +1,47 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title> Lawn Maintenance </title>
-		            <add name="X-Content-Type-Options" value="nosniff" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Lawn Maintenance</title>
+  </head><add name="X-Content-Type-Options" value="nosniff"></add>
 
-	</head>
-	<body>
-		<slot />
-	</body>
+  <body>
+    <slot />
+  </body>
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    :root {
+      /* Primary colors */
+      --primary-1: #e79f23ff; /* orange */
+      --primary-2: #e2b265ff; /* light orange */
+      --primary-3: rgb(97, 77, 45); /* brown */
+
+      /* Secondary colors */
+      --secondary-1: #957623ff; /* brown */
+      --secondary-2: #b8d7acff; /* light green */
+
+      /* Accent colors */
+      --accent-1: #34440dff; /* dark green */
+      --accent-2: #2c331fff; /* dark gray-green */
+      --accent-3: rgba(52, 68, 13, 0.274); /* semi-transparent dark green */
+
+      /* Neutral colors */
+      --neutral-1: #4a523dff; /* gray-green */
+      --neutral-2: #c4cbb9ff; /* gray */
+      --neutral-3: #ced5c3ff; /* light gray */
+      --neutral-4: #f8f8f2ff; /* off-white */
+    }
+  </style>
+
+
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
