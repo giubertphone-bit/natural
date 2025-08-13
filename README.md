@@ -16,3 +16,15 @@ Commercial Services: Grounds Maintenance and Lawn Care for Private Schools, Priv
 Landscape Installation: Sod Placement, Mulching, Planting, Pavers, Hardscaping
 Irrigation Services: Well and Sprinkler Systems Installation, Repair, and Maintenance for Residential, Private Sector, and Public Properties
 Landscape Design and Construction: Custom Landscape Design, Hardscaping, Outdoor Living Spaces
+
+to do
+
+Nav2
+fix second drop down
+fill in names
+create pages for second menu
+button on click animation
+logo
+maybe center buttons into middle via max width
+
+nav1- reduce the number of links to 5

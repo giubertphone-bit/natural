@@ -3,19 +3,21 @@
 ---
 
 <div>
-  <nav class="largeNav">
-    <li>Home (logo)</li>
-    <li class="clickFirstDrop">
-      Residential <div class="droptick">></div>
-      <div id="drop1" class="active inactive">
-        <p>drop1</p><p>drop1</p><p>drop1</p><p>drop1</p><p>drop1</p>
-      </div>
-    </li>
-    <li>Commercial<div class="droptick">></div></li>
-    <li>Contact</li>
-    <li>About</li>
-    <li><button class="ctabutton">Get a Quote</button></li>
-  </nav>
+  <div class="navContainer">
+    <nav class="largeNav">
+      <li>Home (logo)</li>
+      <li class="clickFirstDrop">
+        Residential <div class="droptick">></div>
+        <div id="drop1" class="active inactive">
+          <p>drop1</p><p>drop1</p><p>drop1</p><p>drop1</p><p>drop1</p>
+        </div>
+      </li>
+      <li>Commercial<div class="droptick">></div></li>
+      <li>Contact</li>
+      <li>About</li>
+      <li><button class="ctabutton">Get a Quote</button></li>
+    </nav>
+  </div>
   <nav class="smallNav">
     <div class="item1">Home</div>
     <div class="item2">Residential</div>
@@ -51,11 +53,23 @@
     width: 100%;
     margin: 0;
   }
+  .navContainer {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: var(--accent-1);
+  }
   .smallNav {
     display: none;
   }
   .largeNav {
+    justify-content: center;
+    align-items: center;
+    min-width: 750px;
+    max-width: 1400px;
+    background-color: var(--accent-1);
     display: flex;
+    max-width: 1000px;
   }
   nav {
     display: flex;
@@ -70,15 +84,21 @@
     color: var(--primary-2);
     cursor: pointer;
     background-color: var(--accent-1);
+    margin: 10px;
   }
 
   nav li:hover {
     text-decoration: underline;
   }
+  .clickFirstDrop {
+    display: flex;
+  }
   .droptick {
     display: inline-block;
-    rotate: 90deg;
-    margin-left: 0.5rem;
+    transform: rotate(90deg);
+    margin-left: 3px;
+    position: relative;
+    top: 3px;
   }
   .ctabutton {
     background-color: var(--primary-1);
