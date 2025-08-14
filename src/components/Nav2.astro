@@ -12,7 +12,12 @@
           <p>drop1</p><p>drop1</p><p>drop1</p><p>drop1</p><p>drop1</p>
         </div>
       </li>
-      <li>Commercial<div class="droptick">></div></li>
+      <li>
+        Commercial<div class="droptick">></div>
+        <div id="drop2" class="active inactive">
+          <p>drop1</p><p>drop1</p><p>drop1</p><p>drop1</p><p>drop1</p>
+        </div>
+      </li>
       <li>Contact</li>
       <li>About</li>
       <li><button class="ctabutton">Get a Quote</button></li>
@@ -148,19 +153,29 @@
 <script>
   const droptick = document.querySelectorAll(".droptick");
   const drop1 = document.querySelector("#drop1");
+  const drop2 = document.querySelector("#drop2");
 
   function handleFirstDrop() {
     if (!drop1) return;
-    console.log(drop1);
-    console.log(drop1.classList);
     drop1.classList.toggle("inactive");
   }
 
-  const firstDropDownElement = document.querySelector(".clickFirstDrop");
+  function handleFSecondDrop() {
+    if (!drop2) return;
+    drop2.classList.toggle("inactive");
+  }
 
+  const firstDropDownElement = document.querySelector(".clickFirstDrop");
+  const secondDropDownElement = document.querySelector(".clickFirstDrop");
   if (firstDropDownElement) {
     firstDropDownElement.addEventListener("click", function () {
       return handleFirstDrop();
+    });
+  }
+
+  if (secondDropDownElement) {
+    secondDropDownElement.addEventListener("click", function () {
+      return handleSecondDrop();
     });
   }
 </script>
