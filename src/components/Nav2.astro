@@ -12,7 +12,7 @@
           <p>drop1</p><p>drop1</p><p>drop1</p><p>drop1</p><p>drop1</p>
         </div>
       </li>
-      <li>
+      <li class="clickSecondDrop">
         Commercial<div class="droptick">></div>
         <div id="drop2" class="active inactive">
           <p>drop1</p><p>drop1</p><p>drop1</p><p>drop1</p><p>drop1</p>
@@ -51,6 +51,14 @@
     display: none;
   }
   .drop1 p {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+  }
+  .drop2 p {
     display: flex;
 
     justify-content: center;
@@ -160,13 +168,13 @@
     drop1.classList.toggle("inactive");
   }
 
-  function handleFSecondDrop() {
+  function handleSecondDrop() {
     if (!drop2) return;
     drop2.classList.toggle("inactive");
   }
 
   const firstDropDownElement = document.querySelector(".clickFirstDrop");
-  const secondDropDownElement = document.querySelector(".clickFirstDrop");
+  const secondDropDownElement = document.querySelector(".clickSecondDrop");
   if (firstDropDownElement) {
     firstDropDownElement.addEventListener("click", function () {
       return handleFirstDrop();

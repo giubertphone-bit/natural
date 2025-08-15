@@ -20,11 +20,16 @@ Landscape Design and Construction: Custom Landscape Design, Hardscaping, Outdoor
 to do
 
 Nav2
-fix second drop down
-fill in names
+fix second drop down ✅
+fill in links for drop down (residential and comercial)
 create pages for second menu
 button on click animation
 logo
 maybe center buttons into middle via max width
 
 nav1- reduce the number of links to 5
+
+create a landing page for comming soon
+
+with a contact us submition
+thinking of using google sheets for this
