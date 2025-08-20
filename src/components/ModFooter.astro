@@ -7,9 +7,24 @@ const {
   href1 = "/",
   link2 = "About",
   href2 = "/about",
-  link3 = "Contact",
-  href3 = "contact",
-
+  link3 = "Commercial",
+  href3 = "/commercial",
+  link4 = "Fertilizer",
+  href4 = "/fertilizer",
+  link5 = "Hard Surface",
+  href5 = "/hardsurface",
+  link6 = "Irrigation",
+  href6 = "/irrigation",
+  link7 = "Landscape",
+  href7 = "/landscape",
+  link8 = "Lawn",
+  href8 = "/lawn",
+  link9 = "Tree Service",
+  href9 = "/treeservice",
+  link10 = "Welcome",
+  href10 = "/welcome",
+  link11 = "Test",
+  href11 = "/test",
   //can add more links here
   // link4 = "Blog",
   // href4 = "/blog",
@@ -29,6 +44,14 @@ const {
         <li><a href={href1}>{link1}</a></li>
         <li><a href={href2}>{link2}</a></li>
         <li><a href={href3}>{link3}</a></li>
+        <li><a href={href4}>{link4}</a></li>
+        <li><a href={href5}>{link5}</a></li>
+        <li><a href={href6}>{link6}</a></li>
+        <li><a href={href7}>{link7}</a></li>
+        <li><a href={href8}>{link8}</a></li>
+        <li><a href={href9}>{link9}</a></li>
+        <li><a href={href10}>{link10}</a></li>
+        <li><a href={href11}>{link11}</a></li>
         <!-- add more links here if needed -->
         <!-- <li><a href={href4}>{link4}</a></li> -->
       </ul>
@@ -61,6 +84,8 @@ const {
     gap: 1.5rem;
     padding: 0;
     margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);: 
   }
 
   .nav-links a {

@@ -9,18 +9,23 @@ import ContactToGoogleSheets from "../components/contactToGoogleSheets.astro";
   <div class="contact-us">
     <h2>Get in Touch</h2>
     <p>
-      Welcome — we're glad you're here! At [Your Company Name], we take pride in
-      delivering top-quality service with a personal touch. Whether you're
-      exploring options or ready to get started, we're here to help make the
-      process smooth, transparent, and tailored to your needs. Feel free to
-      reach out with any questions or to request a free quote — no pressure,
-      just friendly guidance and expert support. Let’s make something great
-      together!
+      Welcome — we're glad you're here! We take pride in delivering top-quality
+      service with a personal touch. Whether you're exploring options or ready
+      to get started, we're here to help make the process smooth, transparent,
+      and tailored to your needs. Feel free to reach out with any questions or
+      to request a free quote, no pressure, just friendly guidance and expert
+      support. Let’s make something great together!
     </p>
 
     <ul>
-      <li><strong>Email:</strong> support@example.com</li>
-      <li><strong>Phone:</strong> +1 (555) 123-4567</li>
+      <li>
+        <strong>Email:</strong>
+        <a href="mailto:example@example.com">example@example.com</a>
+      </li>
+      <li>
+        <strong>Phone:</strong>
+        <a href="tel:(305) 555-5555">(305) 555-5555</a>
+      </li>
       <li><strong>Hours:</strong> Monday to Friday, 9 AM – 5 PM (EST)</li>
     </ul>
 
@@ -66,6 +71,10 @@ import ContactToGoogleSheets from "../components/contactToGoogleSheets.astro";
 
   .contact-us ul li strong {
     color: #555;
+  }
+  .contact-us a {
+    color: var(--accent-2);
+    text-decoration-thickness: 1px;
   }
 
   /* Responsive tweaks */
