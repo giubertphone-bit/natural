@@ -35,12 +35,22 @@ import Layout from "../layouts/Layout.astro";
             autocomplete="off"
           />
           <button type="submit">Contact Us</button>
+          <div class="menuOut">
+            <a class="callNow" href="tel:+1-847-555-5555">
+              Call Us 305-555-5555</a
+            >
+          </div>
         </form>
       </div>
     </div>
   </div>
 </Layout>
 <script>
+  // sript to handle form submission
+  // using google apps script
+  // coonects to a google sheet in order to avoid spam and security issues
+  // This script handles the form submission and sends data to a Google Apps Script endpoint
+
   const emailForm = document.getElementById("emailForm");
   if (emailForm) {
     emailForm.addEventListener("submit", function (e) {
@@ -56,16 +66,17 @@ import Layout from "../layouts/Layout.astro";
       data.append("name", String(formData.get("name") ?? ""));
       data.append("phone", String(formData.get("phone") ?? ""));
       data.append("interest", form.interest.value);
+      data.append("time", new Date().toISOString());
 
       fetch(
-        "https://script.google.com/macros/s/AKfycbz-8pFXRl2wJmHSxdT0oCua6hJ9EFfmEREg0znTaTcAie2V7uJD5-gbMPj2YwsD40S9/exec",
+        "https://script.google.com/macros/s/AKfycbyVNfV8i7-voK4xiCCjNnNgqDRAxO9HkE6DqrLxgW1l6J_F-FP9fGX0G8UUVjljDuHlQg/exec",
         {
           method: "POST",
           body: data,
         }
       )
         .then(() => {
-          alert("Thanks for subscribing!");
+          alert("We will contact you shortly!");
           form.reset();
         })
         .catch(() => {
@@ -85,11 +96,11 @@ import Layout from "../layouts/Layout.astro";
   .imgCover {
     margin: 0;
     padding: 0;
-    background-image: url("/img/lawn.jpg");
+    background-image: url("/img/lawn.jpg"); /* replace with desired background image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Optional: keeps image fixed during scroll */
+    background-attachment: fixed; /* Optional: keeps image fixed during scroll but not currently used*/
     font-family: Arial, sans-serif;
     height: 100vh;
     width: 100vw;
@@ -101,18 +112,19 @@ import Layout from "../layouts/Layout.astro";
   .intro {
     color: var(--neutral-4);
     text-align: center;
-    text-shadow: 1px 1px 3px var(--primary-1);
+    text-shadow: 2px 2px 3px black;
   }
   .intro h2 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
+    margin: 0;
   }
   .intro h4 {
     font-size: 1.5rem;
     margin-top: 0;
+    margin-bottom: 5px;
   }
   .form-container {
-    padding: 20px 60px;
+    padding: 0 40px;
     background: var(--accent-2);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -141,12 +153,12 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .form-container button {
-    padding: 12px;
-    margin: 20px;
+    padding: 10px;
+    margin: 10px;
     background-color: var(--primary-1);
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
   }
@@ -154,7 +166,19 @@ import Layout from "../layouts/Layout.astro";
   .form-container button:hover {
     background-color: #005ea2;
   }
-
+  .menuOut {
+    text-align: center;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  .callNow {
+    color: var(--primary-2);
+    padding: 10px;
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    cursor: pointer;
+  }
   /* Honeypot field (hidden from users) */
   .honeypot {
     display: none;

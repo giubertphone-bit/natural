@@ -2,16 +2,26 @@
 import Nav2 from "../components/Nav2.astro";
 import SliderMain from "../components/SliderMain.astro";
 import Layout from "../layouts/Layout.astro";
+import ModButton from "../components/modButton.astro";
+import ModFooter from "../components/ModFooter.astro";
 ---
 
 <Layout>
   <div>
     <Nav2 />
+    <ModButton
+      show={true}
+      message="Submit"
+      bg="red"
+      hoverColor="blue"
+      color="white"
+    />
     <SliderMain />
     <div style="height:2000px;">test</div>
     <div style="height:2000px;">test</div>
     <div style="height:2000px;">test</div>
     <div style="height:2000px;">test</div>
+    <ModFooter link1="test" href1="test" />
   </div>
 </Layout>
 <style>

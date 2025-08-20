@@ -1,5 +1,5 @@
 ---
-
+import ModButton from "./modButton.astro";
 ---
 
 <div>
@@ -20,7 +20,14 @@
       </li>
       <li>Contact</li>
       <li>About</li>
-      <li><button class="ctabutton">Get a Quote</button></li>
+      <li>
+        <ModButton
+          message="Get a Quote"
+          bg="#e79f23ff"
+          hoverColor="#e2b265ff"
+          color="white"
+        />
+      </li>
     </nav>
   </div>
   <nav class="smallNav">
@@ -29,7 +36,14 @@
     <div class="item3">Commercial</div>
     <div class="item4">Contact</div>
     <div class="item5">About</div>
-    <div class="item6"><button class="ctabutton">Get a Quote</button></div>
+    <div class="item6">
+      <ModButton
+        message="Get a Quote"
+        bg="#e79f23ff"
+        hoverColor="#e2b265ff"
+        color="white"
+      />
+    </div>
   </nav>
 </div>
 
