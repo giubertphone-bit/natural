@@ -1,9 +1,82 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Nav1 from '../components/Nav1.astro';
+import Layout from "../layouts/Layout.astro";
+import ContactToGoogleSheets from "../components/contactToGoogleSheets.astro";
 ---
 
 <Layout>
-  <Nav1 />
+  <ContactToGoogleSheets />
 
+  <div class="contact-us">
+    <h2>Get in Touch</h2>
+    <p>
+      Welcome — we're glad you're here! At [Your Company Name], we take pride in
+      delivering top-quality service with a personal touch. Whether you're
+      exploring options or ready to get started, we're here to help make the
+      process smooth, transparent, and tailored to your needs. Feel free to
+      reach out with any questions or to request a free quote — no pressure,
+      just friendly guidance and expert support. Let’s make something great
+      together!
+    </p>
+
+    <ul>
+      <li><strong>Email:</strong> support@example.com</li>
+      <li><strong>Phone:</strong> +1 (555) 123-4567</li>
+      <li><strong>Hours:</strong> Monday to Friday, 9 AM – 5 PM (EST)</li>
+    </ul>
+
+    <p>You can also fill out the form below and we’ll be in touch shortly.</p>
+  </div>
 </Layout>
+<style>
+  /* Contact Us container */
+  .contact-us {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Headings */
+  .contact-us h2 {
+    margin-top: 0;
+    font-size: 28px;
+    color: var(--primary-1);
+  }
+
+  /* Paragraphs */
+  .contact-us p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  /* Contact details list */
+  .contact-us ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .contact-us ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .contact-us ul li strong {
+    color: #555;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 640px) {
+    .contact-us {
+      margin: 20px;
+      padding: 20px;
+    }
+
+    .contact-us h2 {
+      font-size: 24px;
+    }
+  }
+</style>

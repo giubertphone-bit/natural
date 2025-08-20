@@ -16,13 +16,13 @@ import { Swiper, SwiperWrapper, SwiperSlide } from "astro-swiper";
   <SwiperWrapper>
     <!-- Slides -->
     <SwiperSlide>
-      <img src="https://picsum.photos/455/256?nb=2" alt="" />
+      <img src="img/lawn2.jpg" alt="" />
     </SwiperSlide>
     <SwiperSlide>
-      <div>test div inside swiper slide</div>
+      <div class="sliderText">test div inside swiper slide</div>
     </SwiperSlide>
     <SwiperSlide>
-      <img src="https://picsum.photos/455/256?nb=3" alt="" />
+      <img src="img/lawn.jpg" alt="" />
     </SwiperSlide>
   </SwiperWrapper>
 </Swiper>
@@ -37,5 +37,15 @@ import { Swiper, SwiperWrapper, SwiperSlide } from "astro-swiper";
 
   img {
     width: 100%;
+  }
+  .sliderText {
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+
+    background-color: rgba(0, 0, 0, 0.5);
   }
 </style>

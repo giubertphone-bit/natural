@@ -1,14 +1,13 @@
 ---
-import Nav2 from "../components/Nav2.astro";
 import SliderMain from "../components/SliderMain.astro";
 import Layout from "../layouts/Layout.astro";
 import ModButton from "../components/modButton.astro";
 import ModFooter from "../components/ModFooter.astro";
+import TempMenu from "../components/tempMenu.astro";
 ---
 
 <Layout>
   <div>
-    <Nav2 />
     <ModButton
       show={true}
       message="Submit"
@@ -16,12 +15,12 @@ import ModFooter from "../components/ModFooter.astro";
       hoverColor="blue"
       color="white"
     />
+
+    <TempMenu />
+
     <SliderMain />
+
     <div style="height:2000px;">test</div>
-    <div style="height:2000px;">test</div>
-    <div style="height:2000px;">test</div>
-    <div style="height:2000px;">test</div>
-    <ModFooter link1="test" href1="test" />
   </div>
 </Layout>
 <style>

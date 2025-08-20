@@ -1,0 +1,98 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <video autoplay loop muted playsinline width="100%">
+    <source src="/img/sprinkler.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="about-content">
+    <div>
+      <h2>About Us</h2>
+      <p>
+        Creating beautiful outdoor spaces is more than just a jo, it’s a
+        passion. With years of experience in lawn care, landscape design, and
+        sustainable practices, our team is dedicated to helping homeowners and
+        businesses transform their properties into vibrant, welcoming
+        environments.
+      </p>
+    </div>
+
+    <div>
+      <h3>Our Philosophy</h3>
+      <p>
+        We believe that a well-maintained lawn is the foundation of a great
+        landscape. Whether it's a cozy backyard retreat or a polished commercial
+        frontage, every project is approached with care, creativity, and
+        attention to detail.
+      </p>
+    </div>
+
+    <div>
+      <h3>What We Offer</h3>
+      <ul>
+        <li>
+          <strong>Custom Landscape Design</strong>: Tailored layouts that
+          reflect your style and maximize your space.
+        </li>
+        <li>
+          <strong>Routine Lawn Maintenance</strong>: Reliable mowing, edging,
+          fertilization, and seasonal care.
+        </li>
+        <li>
+          <strong>Eco-Friendly Solutions</strong>: Native plants, water-wise
+          irrigation, and organic treatments.
+        </li>
+        <li>
+          <strong>Hardscaping & Enhancements</strong>: Patios, walkways,
+          lighting, and more to elevate your outdoor experience.
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Why It Matters</h3>
+      <p>
+        A thoughtfully landscaped property doesn’t just look good—it feels good.
+        It boosts curb appeal, supports local ecosystems, and creates a space
+        where people want to gather, relax, and enjoy life outdoors.
+      </p>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  div {
+    background-color: var(--accent-2);
+    border-radius: 8px;
+    color: var(--neutral-4);
+    margin-bottom: 30px;
+  }
+  .about-content {
+    padding: 20px;
+  }
+
+  h2,
+  h3 {
+    color: var(--primary-1);
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  p {
+    text-indent: 10px;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  ul {
+    padding-left: 20px;
+    margin-top: 0;
+  }
+
+  li {
+    margin-bottom: 12px;
+  }
+</style>
