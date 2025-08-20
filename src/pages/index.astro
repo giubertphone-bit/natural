@@ -1,14 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import CtaTreeService from "../components/ctaTreeService.astro";
 ---
 
 <Layout>
-  <div class="cta-section">
-    <div class="cta-content">
-      <h2>Transform Your Yard Today</h2>
-      <p>Expert landscaping & tree care to make your outdoor space thrive.</p>
-      <a href="/contact" class="cta-button">Get a Free Quote</a>
-    </div>
+  <div class="ctaBox">
+    <CtaTreeService />
   </div>
 </Layout>
 
@@ -19,48 +16,10 @@ import Layout from "../layouts/Layout.astro";
     display: block;
     margin: 0 auto;
   }
-
-  .cta-section {
-    background-image: url("img/treeServiceClear.jpg"); /* Replace with your actual image path */
-    background-size: cover;
-    background-position: center;
-    padding: 80px 20px;
-    text-align: center;
-    color: white;
-    position: relative;
-  }
-
-  .cta-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
-    z-index: 0;
-  }
-
-  .cta-content {
-    position: relative;
-    z-index: 1;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .cta-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 24px;
-    background-color: var(--primary-1);
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
-  }
-
-  .cta-button:hover {
-    background-color: var(--primary-2);
+  .ctaBox {
+    max-width: 1200px;
+    margin: 20px;
+    padding: 2px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.7);
   }
 </style>
