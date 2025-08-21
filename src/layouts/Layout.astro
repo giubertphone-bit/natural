@@ -13,6 +13,10 @@ import NavNoDrop from "../components/NavNoDrop.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Lawn Maintenance</title>
   </head><add name="X-Content-Type-Options" value="nosniff"></add>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+    rel="stylesheet"
+  />
 
   <body>
     <div class="page-wrapper">
@@ -30,6 +34,9 @@ import NavNoDrop from "../components/NavNoDrop.astro";
       margin: 0;
       width: 100%;
       height: 100%;
+      font-family: "Montserrat", "Arial", sans-serif;
+
+      font-weight: 700;
     }
     .page-wrapper {
       display: flex;
@@ -41,25 +48,23 @@ import NavNoDrop from "../components/NavNoDrop.astro";
     }
 
     :root {
-      /* Primary colors */
-      --primary-1: #e79f23ff; /* orange */
-      --primary-2: #e2b265ff; /* light orange */
-      --primary-3: rgb(97, 77, 45); /* brown */
+      --main1: #75c21fff;
+      --main2: rgb(136, 211, 14);
+      --attention1: rgb(245, 224, 34);
+      --attention2: #e4f522ff;
+      --sub1: #22f5a3ff;
+      --sub2: #4970f5ff;
+      --dark1: #23201fff;
+      --dark2: #c2421eff;
+      --dark3: #53555dff;
 
-      /* Secondary colors */
-      --secondary-1: #957623ff; /* brown */
-      --secondary-2: #b8d7acff; /* light green */
-
-      /* Accent colors */
-      --accent-1: #34440dff; /* dark green */
-      --accent-2: #2c331fff; /* dark gray-green */
-      --accent-3: rgba(52, 68, 13, 0.274); /* semi-transparent dark green */
-
-      /* Neutral colors */
-      --neutral-1: #4a523dff; /* gray-green */
-      --neutral-2: #c4cbb9ff; /* gray */
-      --neutral-3: #ced5c3ff; /* light gray */
-      --neutral-4: #f8f8f2ff; /* off-white */
+      --green: #75c21fff;
+      --lime: #e4f522ff;
+      --aquamarine: #22f5a3ff;
+      --blue: #4970f5ff;
+      --black: #23201fff;
+      --brown: #c2421eff;
+      --gray: #53555dff;
     }
   </style>
 
