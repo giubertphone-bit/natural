@@ -9,7 +9,7 @@ import ContactToGoogleSheets from "../components/contactToGoogleSheets.astro";
   <div class="contact-us">
     <h2>Get in Touch</h2>
     <p>
-      Welcome — we're glad you're here! We take pride in delivering top-quality
+      Welcome! We are glad you are here. We take pride in delivering top-quality
       service with a personal touch. Whether you're exploring options or ready
       to get started, we're here to help make the process smooth, transparent,
       and tailored to your needs. Feel free to reach out with any questions or
@@ -37,17 +37,18 @@ import ContactToGoogleSheets from "../components/contactToGoogleSheets.astro";
   .contact-us {
     max-width: 600px;
     margin: 50px auto;
-    background-color: #ffffff;
+    background-color: white;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: var(--sub2);
   }
 
   /* Headings */
   .contact-us h2 {
     margin-top: 0;
     font-size: 28px;
-    color: var(--primary-1);
+    color: var(--sub2);
   }
 
   /* Paragraphs */
@@ -55,6 +56,7 @@ import ContactToGoogleSheets from "../components/contactToGoogleSheets.astro";
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
+    color: var(--dark3);
   }
 
   /* Contact details list */
@@ -62,6 +64,7 @@ import ContactToGoogleSheets from "../components/contactToGoogleSheets.astro";
     list-style: none;
     padding: 0;
     margin-bottom: 20px;
+    column-rule: var(--sub2);
   }
 
   .contact-us ul li {
@@ -70,10 +73,10 @@ import ContactToGoogleSheets from "../components/contactToGoogleSheets.astro";
   }
 
   .contact-us ul li strong {
-    color: #555;
+    color: var(--sub2);
   }
   .contact-us a {
-    color: var(--accent-2);
+    color: var(--sub2);
     text-decoration-thickness: 1px;
   }
 

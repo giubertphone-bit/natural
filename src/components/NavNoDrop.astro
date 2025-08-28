@@ -2,173 +2,115 @@
 import ModButton from "./modButton.astro";
 ---
 
-<div>
-  <div class="navContainer">
-    <nav class="largeNav">
-      <li><a href="/">Home (logo)</a></li>
-      <li><a href="/residential">Residential</a></li>
+<div class="navContainer">
+  <nav class="largeNav">
+    <li><a href="/">Home (logo)</a></li>
+    <li><a href="/residential">Residential</a></li>
+    <li>
+      <a href="/commercial">Commercial</a>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/about">About</a></li>
       <li>
-        <a href="/commercial">Commercial</a>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/about">About</a></li>
-        <li>
-          <a href="/contact"
-            ><ModButton
-              href="/contact"
-              message="Get a Quote"
-              bg="#e79f23ff"
-              hoverColor="#e2b265ff"
-              color="white"
-            />
-          </a>
-        </li>
+        <a href="/contact"
+          ><ModButton href="/contact" message="Get a Quote" />
+        </a>
       </li>
-    </nav>
-    <nav class="smallNav">
-      <div class="item1"><a href="/">Home (logo)</a></div>
-      <div class="item2"><a href="/residential">Residential</a></div>
-      <div class="item3"><a href="/commercial">Commercial</a></div>
-      <div class="item4"><a href="/contact">Contact</a></div>
-      <div class="item5"><a href="/about">About</a></div>
-      <div class="item6">
-        <ModButton
-          href="/quote"
-          message="Get a Quote"
-          bg="var(--attention1)"
-          hoverColor="var(--attention2)"
-          color="var(--dark2)"
-        />
-      </div>
-    </nav>
-  </div>
+    </li>
+  </nav>
+  <nav class="smallNav">
+    <div class="item1"><a href="/">Home (logo)</a></div>
+    <div class="item2"><a href="/residential">Residential</a></div>
+    <div class="item3"><a href="/commercial">Commercial</a></div>
+    <div class="item4"><a href="/contact">Contact</a></div>
+    <div class="item5"><a href="/about">About</a></div>
+    <div class="item6">
+      <ModButton href="/quote" message="Get a Quote" />
+    </div>
+  </nav>
+  <div class="divider"></div>
+</div>
 
-  <style>
-    .active {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 56px;
-      background-color: var(--accent-1);
-      min-width: 100px;
-      color: var(--primary-1);
-      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
-      z-index: 999;
-      justify-content: center;
-      align-items: center;
-    }
-    .inactive {
-      display: none;
-    }
-    .drop1 p {
-      display: flex;
+<style>
+  .navContainer {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main1);
+  }
+  .smallNav {
+    display: none;
+  }
+  .largeNav {
+    justify-content: center;
+    align-items: center;
+    min-width: 750px;
+    max-width: 1400px;
+    display: flex;
+    max-width: 1000px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+  }
 
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      margin: 0;
-    }
-    .drop2 p {
-      display: flex;
-
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      margin: 0;
-    }
-    .navContainer {
-      justify-content: center;
-      align-items: center;
-      display: flex;
-      background-color: var(--accent-1);
-    }
-    .smallNav {
-      display: none;
+  nav li {
+    list-style: none;
+    cursor: pointer;
+    margin: 10px;
+  }
+  nav a {
+    text-decoration: none;
+    color: var(--dark3);
+    font-size: 16px;
+    font-weight: bold;
+  }
+  nav li:hover {
+    color: var(--dark3);
+    text-decoration: underline;
+  }
+  @media (max-width: 800px) {
+    nav li {
+      margin-bottom: 10px;
     }
     .largeNav {
-      justify-content: center;
-      align-items: center;
-      min-width: 750px;
-      max-width: 1400px;
-      background-color: var(--accent-1);
-      display: flex;
-      max-width: 1000px;
+      display: none;
     }
-    nav {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      background-color: var(--accent-1);
-      padding: 10px;
+    .smallNav {
+      display: grid;
+      grid-template-columns: auto auto auto auto; /* Last column takes remaining space */
+      grid-template-rows: repeat(4, auto); /* Define 4 rows explicitly */
+      gap: 5px;
+      padding: 2px;
     }
 
-    nav li {
-      list-style: none;
-      color: var(--primary-2);
+    .smallNav > div {
+      color: var(--dark3);
+      text-align: center;
+      padding: 7px;
+      font-size: 14px;
       cursor: pointer;
-      background-color: var(--accent-1);
-      margin: 10px;
     }
-    nav a {
-      text-decoration: none;
-      color: var(--primary-2);
-      font-size: 16px;
-      font-weight: bold;
-    }
-    nav li:hover {
+    .smallNav a:hover {
       text-decoration: underline;
     }
-    .clickFirstDrop {
-      display: flex;
-    }
-    .droptick {
-      display: inline-block;
-      transform: rotate(90deg);
-      margin-left: 3px;
-      position: relative;
-      top: 3px;
-    }
-    .ctabutton {
-      background-color: var(--primary-1);
-      color: white;
-      border: none;
-      padding: 10px 20px;
 
-      cursor: pointer;
+    .item1 {
+      grid-row: 1 / span 2;
     }
-    @media (max-width: 800px) {
-      nav li {
-        margin-bottom: 10px;
-      }
-      .largeNav {
-        display: none;
-      }
-      .smallNav {
-        display: grid;
-        grid-template-columns: auto auto auto auto; /* Last column takes remaining space */
-        grid-template-rows: repeat(4, auto); /* Define 4 rows explicitly */
-        gap: 5px;
-        background-color: var(--accent-1);
-        padding: 2px;
-      }
 
-      .smallNav > div {
-        color: var(--primary-2);
-        text-align: center;
-        padding: 7px;
-        font-size: 14px;
-        text-decoration: underline;
-        text-decoration-color: var(--primary-3);
-        cursor: pointer;
-      }
-
-      .item1 {
-        grid-row: 1 / span 2;
-      }
-
-      .item6 {
-        grid-column: 4 / 5;
-        grid-row: 1 / span 2; /* Only span 2 rows */
-      }
+    .item6 {
+      grid-column: 4 / 5;
+      grid-row: 1 / span 2; /* Only span 2 rows */
     }
-  </style>
-</div>
+  }
+  .divider {
+    height: 1px;
+    background-color: var(--sub2);
+    margin: 0px 0;
+    width: 100%;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+  }
+</style>
