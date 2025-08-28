@@ -1,0 +1,35 @@
+---
+const {
+  bg = "#e79f23ff",
+  color = "#f8f8f2ff",
+  hoverColor = "yellow",
+  message = "Click Me",
+  href = "/",
+} = Astro.props;
+---
+
+<div class="container">
+  <div class="column">Column 1</div>
+  <div class="column">Column 2</div>
+  <div class="column">Column 3</div>
+</div>
+
+<style>
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .column {
+    flex: 1 1 100%;
+    padding: 10px;
+    border: 1px solid #000;
+  }
+
+  @media (min-width: 600px) {
+    .column {
+      flex: 1;
+    }
+  }
+</style>
