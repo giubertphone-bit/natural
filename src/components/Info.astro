@@ -1,33 +1,46 @@
 ---
-const {
-  bg = "#e79f23ff",
-  color = "#f8f8f2ff",
-  hoverColor = "yellow",
-  message = "Click Me",
-  href = "/",
-} = Astro.props;
+const { c1 = "c1", c2 = "c2", c3 = "c3" } = Astro.props;
 ---
 
-<div class="container">
-  <div class="column">Column 1</div>
-  <div class="column">Column 2</div>
-  <div class="column">Column 3</div>
+<div class="wrap">
+  <div class="container">
+    <div class="column">{c1}</div>
+    <div class="column">{c2}</div>
+    <div class="column">{c3}</div>
+  </div>
 </div>
-
 <style>
+  .wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
   .container {
+    border: 0.5px dotted var(--dark3);
+    max-width: 700px;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 3px;
   }
 
   .column {
     flex: 1 1 100%;
     padding: 10px;
-    border: 1px solid #000;
+    min-height: 100px;
+    margin: 10px;
+    border: 1px solid #00000012;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 710px) {
     .column {
       flex: 1;
     }
